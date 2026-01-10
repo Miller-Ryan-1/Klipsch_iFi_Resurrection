@@ -91,6 +91,7 @@ Klipsch_iFi_Resurrection/
 - RCA-to-3.5 mm or 3.5 mm-to-3.5 mm audio cable
   - RCA link
 
+*$$$ - The total cost is hard to pinpoint, since many components cannot be purchased in single quantities, but it should cost less than $40, to include Bluetooth Audio Module and raw PLA (material I used for the box).*
 ---
 
 ## Procedure
