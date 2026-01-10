@@ -64,24 +64,24 @@ Klipsch_iFi_Resurrection/
 
 ## Bill of Materials (BOM)
 
-| Qty | Component | Link to Example |
-|----:|----------:|----------------:|
-| 1 | Arduino-compatible 5 V microcontroller | |
-| 2 | 100 kΩ resistors | |
-| 6 | 10 kΩ resistors | |
-| 2 | 100 Ω resistors | |
-| 1 | 1 kΩ resistor | |
-| 1 | 10 µF electrolytic capacitor | |
-| 2 | 0.1 µF ceramic capacitors | |
-| 1 | 47 nF ceramic capacitor | |
-| 2 | 1 nF ceramic capacitors | |
-| 1 | Male DIN-9 cable | |
-| 1 | 12 V → 5 V buck converter | |
-| 4 | Normally-open momentary push buttons | |
-| 1 | LED (power indicator) | |
-| 1 | Breadboard | |
-| 1 | Ferrite core | |
-| 1 | Project enclosure | |
+| Qty | Component (and link to example) |
+|----:|:--------------------------------|
+| 1 | [Arduino-compatible 5 V microcontroller](https://www.amazon.com/AYWHP-ATmega328P-Microcontroller-Compatible-Arduino/dp/B0DFGQW2ZY/ref=sr_1_10?crid=2BY0XVR3IB1V3&dib=eyJ2IjoiMSJ9.GATKPetBfUe5w5-6k_zSKH42eb3uBu30VJkO4fF81mhXqRA4TAEoFbVfIlx8S1_A3HnFC9vepqekAfkALx7qtGkbdvzg4XDW6TyWUPTz4zXqgBd5DSLMgVEHexgYsyBhjXHEzi5HrRYemm7-300iHKyC6ift4QvX1OI8byyKTtK5Ur3ifBol3lXcxBG57Wad_-vLFNQ4gTgf6rwhom-h5gqAlMz_vlCWM8n-nAnvWsr2u-yFsaix3FwxZHnAruJZVcix8iCjO3cs1V74hl4iFT32SHWHjAUE16CGLoOLAvE.GoFDfQ-YqIemsLZWNtBm7vYQ8k-XYaNAv2QxddWCZzg&dib_tag=se&keywords=arduino%2Bmicrocontroller&qid=1768085752&s=electronics&sprefix=arduino%2Bmicrocontrol%2Celectronics%2C185&sr=1-10&th=1) |
+| 2 | 100 kΩ resistors |
+| 6 | 10 kΩ resistors |
+| 2 | 100 Ω resistors |
+| 1 | 1 kΩ resistor |
+| 1 | 10 µF electrolytic capacitor |
+| 2 | 0.1 µF ceramic capacitors |
+| 1 | 47 nF ceramic capacitor |
+| 2 | 1 nF ceramic capacitors |
+| 1 | [Male DIN-9 cable](https://www.amazon.com/dp/B0C9QGQHK2?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_1&th=1) |
+| 1 | [12 V → 5 V buck converter](https://www.amazon.com/dp/B08VHZJ3C8?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_1&th=1) |
+| 4 | [Normally-open momentary push buttons](https://www.amazon.com/DAOKI-Miniature-Momentary-Tactile-Quality/dp/B01CGMP9GY/ref=sr_1_13?crid=12VEPS1SR6NGK&dib=eyJ2IjoiMSJ9.70zlMBgA15v9q7y3AFAiCAIel2hKqnbqjtNMOVK8-tNyZPrU3cYH5CQwUy_7ChWBV0GQxiImrt17IrhqHlT6uVo-J4jh-ELflMHr3veXzD5O2sH0CPPozZ_I0cAkcU3_GtTen9GQ3TPAbWspujofZanom5JyW7PcyZaaIfScVSDAVUrzlywp0O2plqTyWN87_c7cXtH1FWrt56nhHzM3TCs2rFSYCkR4G502YB4kplU.zUY0Kh5cW6ihEZP4YqBRtM9jrlhuiQvKA_j1VZmkcfo&dib_tag=se&keywords=push+button+switch+small&qid=1768085836&sprefix=push+button+switch+sma%2Caps%2C236&sr=8-13) |
+| 1 | [LED (power indicator)](https://www.amazon.com/OWOFYDR-diffused-Electronic-Component-Indicator/dp/B0DHX8Q58F/ref=sr_1_4?crid=NTVQCFQ55TIL&dib=eyJ2IjoiMSJ9.nfNeLurDK0xmPKPo1B-GSoj4mtffqeYQ9DMLjGuMNhCZMM3qXf1CeJMKmTXuNCXY3oXlUYlW84MtCIL-w4vFbpcMAJednpY-feccOyYE4w9OLlJohnUbEmfJmE8vPN2RTsdU47C7AAzz41kjz5znGF8d1r8uBcBuyApJYO1X-LXigRDQdhLXrxW_pJt4j0kvcW4IFfX-caQlsbAmwuXWurgBG7R0cwBs1xh_2M8gePs.8O9EPZxO60dxIGWgZKXVfNI-e3aMhl0rDJcaGRXxKcQ&dib_tag=se&keywords=3mm%2Bblue%2Bled&qid=1768085874&sprefix=3mm%2Bblue%2Bled%2Caps%2C260&sr=8-4&th=1) |
+| 1 | [Breadboard](https://www.amazon.com/ELEGOO-Breadboard-Solderless-Breadboards-Electronics/dp/B0CYPVMK9J/ref=sr_1_6?crid=34XNNK2VKJDY9&dib=eyJ2IjoiMSJ9.5Z5yTwL-oa1r18Ah_zf9OdziZtM7NtJzJKlf3z7Il1S4MLuED5bFZZE7o_ffMgS0GBILa55u1Lkk8jXKuiiA4rQqsbMK6XvViI-aXJGnMDg1uIKPGqkkhv9hWwaQJp_3hMvFVOMgbH6BXhspwxFetOKyHtxHMSY4Awg6gEg_NZl67uj4ish71SzBdsO--6l0euqnlbwsOuh43h9kUSVMayjfspJnSABn1q8X7uubPRw.APH5oW3IoCp_zPBh78gDdhs2v-3UvjuWb0pEdSr706E&dib_tag=se&keywords=breadboard&qid=1768085893&sprefix=breadboard%2Caps%2C283&sr=8-6) |
+| 1 | [Ferrite core](https://www.amazon.com/20pcs-Clip-Ferrite-Suppressor-Diameter/dp/B0CSXZWGD6/ref=sr_1_3?crid=1A1G6EWLYCKHT&dib=eyJ2IjoiMSJ9.rdCMnR6pY0gdH79daxUhaI2sy7PM8W-e3xyqLaWgmToBQrROBOH9IFF48_eTUnFIoQe74AMRpea8EpaG1YqQnQaAiBtntoYn5Y3hWwv4KBiYlc6yDYC-QVDLG1C462hj60PGCVrXedi6-uiMQfBCcL-Kqx5GF5WzJqN7z_2EJlQXnIOnqCNzFN_IKO5u4e3FlFyaLnA69AkUxP4Qecss1NBR5A6tbTTbJbwVlzR4c00.LIZbIjlo9PchUXDy70XHJlOPDOeYdm_lvjXLLpUOsWQ&dib_tag=se&keywords=Ferrite+core&qid=1768085914&sprefix=ferrite+core%2Caps%2C243&sr=8-3) |
+| 1 | Project enclosure |
 
 **Optional (but recommended):**
 - Bluetooth audio module (with external antenna connector)
@@ -242,7 +242,17 @@ STL files are provided in `case_stil_files/`.
 
 ---
 
-## Final Notes
+## Status
 
-The system now works flawlessly and still sounds incredible.  
-This project finally rescued a piece of hardware I refused to throw away.
+The revived system:
+- Powers on normally
+- Retains original sound quality
+- Supports modern audio sources
+- Operates without the original dock
+
+---
+
+## Disclaimer
+
+This project is not affiliated with Klipsch.  
+Provided for educational and personal repair purposes only.
