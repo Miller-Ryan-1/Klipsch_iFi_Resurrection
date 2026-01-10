@@ -20,11 +20,11 @@ This repository contains:
 
 ## Background
 
-I’ve been hauling this Klipsch iFi system around since mid-2006. I originally intended to buy a Bose SoundDock, but a Best Buy salesman directed me toward the Klipsch instead. It was more expensive, far heavier, and sounded dramatically better.
+I’ve been hauling this Klipsch iFi system around since mid-2006. I originally intended to buy a Bose SoundDock, but a Best Buy salesman directed me toward the Klipsch instead. It was more expensive (about $100 more), and far heavier, but sounded dramatically better. And it got LOUD.
 
-The system followed me across continents. At one point, a group of fans of *Club Jesuitenfahrt 7* in Amberg, Germany danced and drank the night away to these speakers.
+The system followed me across continents. Fans of *Club Jesuitenfahrt 7* in Amberg, Germany would dance and drank the night away to these speakers.
 
-Eventually, the proprietary dock became the system’s Achilles’ heel. Newer iPhones no longer fit properly, and when the dock finally failed electrically, the entire subwoofer refused to power on—even when using the auxiliary input. Without a working dock, the system was effectively bricked.
+Eventually, the proprietary dock became the system’s Achilles’ heel. Newer iPhones no longer fit properly, and when the dock finally failed electrically, the entire subwoofer refused to power on—even when using the auxiliary input. Without a working dock, the system was bricked.
 
 There is no public documentation on how to repair or bypass this dock logic. This was a one-off product for Klipsch, and very little information was ever released.
 
@@ -34,6 +34,7 @@ Using modern LLMs, I was finally able to identify the key control IC (LM1973) an
 
 ## Repository Structure
 
+```text
 Klipsch_iFi_Resurrection/
 │
 ├── klipsch_reviver/
@@ -57,34 +58,38 @@ Klipsch_iFi_Resurrection/
 ├── DIN-9 Pinout.pdf
 ├── LM1973_info.pdf
 └── README.md
+```
 
 ---
 
 ## Bill of Materials (BOM)
 
-| Qty | Component |
-|----:|-----------|
-| 1 | Arduino-compatible 5 V microcontroller |
-| 2 | 100 kΩ resistors |
-| 6 | 10 kΩ resistors |
-| 2 | 100 Ω resistors |
-| 1 | 1 kΩ resistor |
-| 1 | 10 µF electrolytic capacitor |
-| 2 | 0.1 µF ceramic capacitors |
-| 1 | 47 nF ceramic capacitor |
-| 2 | 1 nF ceramic capacitors |
-| 1 | Male DIN-9 cable |
-| 1 | 12 V → 5 V buck converter |
-| 4 | Normally-open momentary push buttons |
-| 1 | LED (power indicator) |
-| 1 | Breadboard |
-| 1 | Ferrite core |
-| 1 | Project enclosure |
+| Qty | Component | Link to Example |
+|----:|----------:|----------------:|
+| 1 | Arduino-compatible 5 V microcontroller | |
+| 2 | 100 kΩ resistors | |
+| 6 | 10 kΩ resistors | |
+| 2 | 100 Ω resistors | |
+| 1 | 1 kΩ resistor | |
+| 1 | 10 µF electrolytic capacitor | |
+| 2 | 0.1 µF ceramic capacitors | |
+| 1 | 47 nF ceramic capacitor | |
+| 2 | 1 nF ceramic capacitors | |
+| 1 | Male DIN-9 cable | |
+| 1 | 12 V → 5 V buck converter | |
+| 4 | Normally-open momentary push buttons | |
+| 1 | LED (power indicator) | |
+| 1 | Breadboard | |
+| 1 | Ferrite core | |
+| 1 | Project enclosure | |
 
 **Optional (but recommended):**
 - Bluetooth audio module (with external antenna connector)
+  - Sub example
 - Bluetooth antenna
+  - Antenna Link
 - RCA-to-3.5 mm or 3.5 mm-to-3.5 mm audio cable
+  - RCA link
 
 ---
 
@@ -92,8 +97,9 @@ Klipsch_iFi_Resurrection/
 
 ### 0) Optional: Inspect the Subwoofer Internals
 
-![Main board](pictures/main_board.JPG)  
 ![Subwoofer internals](pictures/sub_insides.JPG)
+
+![Main board](pictures/main_board.JPG)  
 
 I initially opened the subwoofer to understand the signal flow and verify component health—especially the LM1973 digital volume control IC that the dock communicates with.
 
@@ -108,8 +114,9 @@ In hindsight, this step was unnecessary; all internal components were functional
 
 ### 1) Prepare the DIN-9 Cable
 
-![DIN-9 mockup](pictures/DIN-9_mockup.JPG)  
 ![DIN-9 wires](pictures/DIN-9_wires.JPG)
+
+![DIN-9 mockup](pictures/DIN-9_mockup.JPG)  
 
 Cut the DIN-9 cable approximately 12 inches from the male plug. Strip the outer sheath to expose:
 - 9 internal conductors
@@ -140,7 +147,7 @@ Reference: `DIN-9 Pinout.pdf`
 ### 2) Sense Wake & Power Enable
 
 - Connect Pin 8 → Pin 3 through **100 Ω**
-- Connect Pin 8 → GND through **100 kΩ + 1 nF**
+- Connect Pin 8 → Pin 6 (GND) through **100 kΩ + 1 nF**
 - Repeat for Pin 9
 
 At this point, the sub should power on (audible relay click and faint hum).  
@@ -152,8 +159,8 @@ Turn off before proceeding.
 
 - Feed Pin 5 (12 V) into the buck converter
 - Generate a clean 5 V rail
-- Add:
-  - 10 µF electrolytic capacitor
+- Add between the 5V rail and ground:
+  - 10 µF electrolytic capacitor (polarity matters!)
   - 0.1 µF ceramic capacitor
 - Wrap a ferrite core around the buck output leads
 
@@ -163,7 +170,7 @@ Turn off before proceeding.
 
 Reference: `LM1973_info.pdf`
 
-To generate 2.5 V logic from Arduino GPIO, use 10 kΩ / 10 kΩ voltage dividers.
+To generate 2.5 V logic from Arduino GPIO, use 10 kΩ / 10 kΩ voltage dividers. That means connect each of the indicated DIN pins to ground via a 10 kΩ resistor, and also connect it to the indicated Arduino pins through 10 kΩ resistors.
 
 | DIN Pin | Arduino Pin |
 |--------:|------------:|
