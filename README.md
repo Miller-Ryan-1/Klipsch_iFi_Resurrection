@@ -85,11 +85,8 @@ Klipsch_iFi_Resurrection/
 
 **Optional (but recommended):**
 - Bluetooth audio module (with external antenna connector)
-  - Sub example
-- Bluetooth antenna
-  - Antenna Link
+- Bluetooth antenna (external)
 - RCA-to-3.5 mm or 3.5 mm-to-3.5 mm audio cable
-  - RCA link
 
 *$$ Note: The total cost is hard to pinpoint, since many components cannot be purchased in single quantities, but it probably cost me less than $40, to include Bluetooth Audio Module and raw PLA filament (material I used for the box).*
 
@@ -128,7 +125,10 @@ Cut the DIN-9 cable approximately 12 inches from the male plug. Strip the outer 
 Keep exposed wire lengths as short as possible to minimize noise.
 
 Use a multimeter to identify each conductor’s pin. Do **not** rely on wire colors.  
-Reference: `DIN-9 Pinout.pdf`
+
+Speaking of colors, the colors in the diagram below is NOT related to wire colors, but rather functional pin groupings.
+
+![DIN-9 pinout](pictures/DIN-9_pinout.JPG)
 
 #### Pin Mapping
 
@@ -213,7 +213,12 @@ To generate 2.5 V logic from Arduino GPIO, use 10 kΩ / 10 kΩ voltage dividers.
 
 ---
 
-### 8) Programming & Enclosure
+### 8) Circuit Schematic
+
+![Diagram](pictures/ghetto_schematic.JPG)
+
+---
+### 9) Programming & Enclosure
 
 Flash `klipsch_reviver.ino` using the Arduino IDE.  
 A microcontroller with native USB is strongly recommended to avoid FTDI headaches.
